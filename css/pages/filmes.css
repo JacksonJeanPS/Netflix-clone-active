@@ -1,0 +1,148 @@
+:root {
+    --vermelho: #e50914;
+    --preto: #141414;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preto);
+    font-family: 'Bebas Neue', sans-serif !important;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img{
+    height: 80px;
+    width: auto;
+    display: flex;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 30px;
+}
+
+header nav a:hover {
+    color: #ffff;
+}
+
+main h4{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 35px;
+    font-size: 25px;
+}
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url('https://www.themoviedb.org/t/p/original/lbJaDSIEIp2lpsDzepsDfUXyZPb.jpg');
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 15px;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 15px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.assistir {
+    text-decoration: none;
+    color: white;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 35px;
+
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes {
+    margin-top: 15px;
+}
+
+.carrosel-filmes {
+    margin-top: 15px;
+    padding: 35px;
+}
+
+.owl-carousel {
+    margin-top: 5px;
+}

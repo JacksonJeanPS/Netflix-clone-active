@@ -1,0 +1,67 @@
+:root {
+    --vermelho: #e50914;
+    --preto: #141414;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preto);
+    font-family: 'Bebas Neue', sans-serif !important;
+    color: white;
+}
+
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img{
+    height: 80px;
+    width: auto;
+    display: flex;
+    margin-left: 18px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 30px;
+}
+
+header nav a:hover {
+    color: #ffff;
+}
+
+main h4{
+    display: flex;
+    margin-left: 35px;
+    font-size: 25px;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes {
+    margin-top: 15px;
+    padding: 35px;
+}
