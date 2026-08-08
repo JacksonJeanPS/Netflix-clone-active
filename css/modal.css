@@ -239,14 +239,133 @@
     color: #aaa;
 }
 
+header {
+    background: #141414;
+    position: relative;
+    z-index: 10;
+}
+
+header .container {
+    width: min(1400px, 100%);
+    min-height: 76px;
+    margin: 0 auto;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+header .logo {
+    flex: 0 0 auto;
+    line-height: 0;
+}
+
+header .logo img {
+    width: auto;
+    height: 54px;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: auto;
+}
+
+header nav a,
+header nav a:visited {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+    color: #fff;
+}
+
+header nav a:focus-visible,
+.barra-busca input:focus-visible,
+.botao-busca:focus-visible {
+    outline: 2px solid var(--vermelho);
+    outline-offset: 3px;
+}
+
+.barra-busca {
+    flex: 0 1 260px;
+    margin: 0;
+}
+
+.barra-busca form {
+    width: 100%;
+}
+
+.barra-busca input {
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.filme-principal .container {
+    width: min(720px, calc(100% - 32px));
+    margin: 0 16px;
+}
+
+.filme-principal .titulo,
+.filme-principal .descricao {
+    margin-left: 0;
+}
+
+.filme-principal .titulo {
+    margin-top: 0;
+}
+
+.filme-principal .descricao {
+    max-width: 680px;
+}
+
+.carrosel-filmes {
+    padding: 24px clamp(16px, 4vw, 48px);
+}
+
 @media screen and (max-width: 768px) {
     header .container {
-        flex-wrap: wrap;
+        min-height: 0;
+        padding: 12px 16px 16px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    header .logo {
+        align-self: center;
+    }
+
+    header .logo img {
+        height: 48px;
+    }
+
+    header nav {
+        justify-content: center;
+        gap: 22px;
+        margin: 0;
+    }
+
+    header nav a,
+    header nav a:visited {
+        font-size: 14px;
     }
 
     .barra-busca {
         width: 100%;
-        margin: 10px 18px 0;
+        flex-basis: auto;
+        margin: 0;
     }
 
     .barra-busca input {
@@ -259,5 +378,59 @@
 
     .modal-cabecalho h2 {
         font-size: 24px;
+    }
+
+    .filme-principal {
+        min-height: 480px;
+        height: auto;
+        padding: 48px 0 36px;
+    }
+
+    .filme-principal .titulo {
+        font-size: clamp(30px, 9vw, 42px);
+        line-height: 1.05;
+    }
+
+    .filme-principal .descricao {
+        margin-top: 14px;
+        margin-bottom: 24px;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .botoes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .botao {
+        margin: 0;
+        width: auto;
+    }
+
+    .carrosel-filmes {
+        padding: 20px 16px;
+    }
+
+    main h4,
+    .secao-busca h4 {
+        margin-left: 0;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    header nav {
+        gap: 16px;
+    }
+
+    .barra-busca input {
+        font-size: 15px;
+    }
+
+    .filme-principal {
+        min-height: 500px;
     }
 }
