@@ -6,52 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/pages/series-home.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <!--Owl css-->
     <link rel="stylesheet" href="../css/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="../css/owl/owl.theme.default.min.css">
-    
-    <title>Clone-Netflix</title>
+
+    <title>Clone-Netflix - Séries</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="logo"><a href="../index.html"><img src="../img/Netflix-Brand-Logo.png" alt=""></a></h1>
+            <h1 class="logo"><a href="../index.html"><img src="../img/Netflix-Brand-Logo.png" alt="Netflix"></a></h1>
             <nav>
                 <a href="../index.html">Inicio</a>
                 <a href="../pages/Series.html">Séries</a>
                 <a href="../pages/Filmes.html">Filmes</a>
             </nav>
+            <div class="barra-busca">
+                <form id="form-busca" autocomplete="off">
+                    <input id="input-busca" type="text" placeholder="Buscar filmes e séries...">
+                    <button class="botao-busca" type="submit" aria-label="Buscar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </header>
+
     <main>
-        <div class="filme-principal">
-            <div class="container">
-                <h3 class="titulo">A Casa do Dragão</h3>
-                <p class="descricao">200 anos antes dos eventos de "Game of Thrones", os Targaryen estavam no ápice de seu poder, tendo inúmeros dragões sob seu comando, mas nem tudo dura para sempre. O início do fim da dinastia Targaryen.</p>
-                <div class="botoes">
-                    <a href="https://embedder.net/e/tt11198334" class="assistir"><button role="button" class="botao">
-                        <i class="fa-solid fa-play"></i>
-                        Assistir Agora
-                    </button></a>
-                    <button role="button" class="botao">
-                        <i class="fa-solid fa-info"></i>
-                        Mais informações
-                    </button>
-                </div>
-            </div>
-        </div>
+        <section class="carrosel-filmes">
+            <h4>Séries populares</h4>
+            <div id="carrossel-series-pop" class="owl-carousel owl-theme"></div>
+        </section>
+
+        <section class="carrosel-filmes">
+            <h4>Animação</h4>
+            <div id="carrossel-series-anim" class="owl-carousel owl-theme"></div>
+        </section>
     </main>
-    <div class="carrosel-filmes">
-        <h4>Séries para toda família</h4>
-        <div class="owl-carousel owl-theme">
-            <div class="item"><a href="../pages/serie-video.html"><img class="box-filme" src="https://www.themoviedb.org/t/p/original/ruHPkmmAwBTCzNXtHot18rs6ctN.jpg" alt="a casa do dragao"></a>
-            </div>
+
+    <footer class="site-footer">
+        <p>Este projeto é um estudo de interface e consome a
+            <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB API</a>
+            para exibir catálogo e trailers oficiais (YouTube). Nenhum conteúdo protegido é distribuído.</p>
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.
+            <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426abc01e99cfea450f700cf52b8dd1e9240686c1b4.svg" alt="TMDB logo">
+        </p>
+    </footer>
+
+    <div id="modal" aria-hidden="true">
+        <div class="modal-conteudo">
+            <button id="modal-fechar" aria-label="Fechar">&times;</button>
+            <div id="modal-corpo"></div>
         </div>
     </div>
+
     <script src="https://kit.fontawesome.com/b5569682a4.js" crossorigin="anonymous"></script>
     <script src="../js/owl/jquery.min.js"></script>
     <script src="../js/owl/owl.carousel.min.js"></script>
     <script src="../js/owl/setup.js"></script>
+    <script src="../js/config.js"></script>
+    <script type="module" src="../js/ui.js"></script>
 </body>
 </html>

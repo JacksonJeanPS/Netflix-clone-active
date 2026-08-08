@@ -1,0 +1,9 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Arquivo local com a chave da TMDB (não versionar — contém segredo)
+js/config.js
+
+# Node
+node_modules/
+package-lock.json

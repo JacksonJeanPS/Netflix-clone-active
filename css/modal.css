@@ -1,0 +1,263 @@
+.barra-busca {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.barra-busca form {
+    display: flex;
+    align-items: center;
+}
+
+.barra-busca input {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #555;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    width: 200px;
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.barra-busca input:focus {
+    outline: none;
+    border-color: var(--vermelho);
+    width: 260px;
+}
+
+.barra-busca .botao-busca {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 6px;
+}
+
+.skeleton-card {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    border-radius: 4px;
+    background: linear-gradient(100deg, #222 30%, #333 50%, #222 70%);
+    background-size: 200% 100%;
+    animation: skeleton-anim 1.2s infinite linear;
+}
+
+@keyframes skeleton-anim {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.sem-resultado,
+.erro-carrossel {
+    color: #bbb;
+    padding: 20px 10px;
+    font-size: 18px;
+}
+
+.erro-carrossel {
+    color: #ff6b6b;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    z-index: 2;
+}
+
+.box-filme-img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+}
+
+.card-nota {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #f5c518;
+    font-size: 13px;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.secao-busca {
+    padding: 20px 35px;
+}
+
+.secao-busca h4 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.grid-resultados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+#modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 40px 15px;
+}
+
+#modal.aberto {
+    display: flex;
+}
+
+.modal-conteudo {
+    position: relative;
+    background: #181818;
+    width: 100%;
+    max-width: 850px;
+    border-radius: 8px;
+    padding: 24px;
+    color: #fff;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+#modal-fechar {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#modal-fechar:hover {
+    background: var(--vermelho);
+}
+
+.modal-loading {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 20px;
+    color: #aaa;
+}
+
+.modal-cabecalho h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.modal-meta {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.modal-meta .modal-tipo {
+    background: var(--vermelho);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.modal-player {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+}
+
+.modal-player iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.modal-sem-trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background: #222;
+    border-radius: 6px;
+    color: #bbb;
+    gap: 10px;
+}
+
+.modal-sem-trailer i {
+    font-size: 40px;
+    color: var(--vermelho);
+}
+
+.modal-sinopse {
+    margin-top: 16px;
+    line-height: 1.5;
+    color: #ddd;
+    font-size: 17px;
+}
+
+.site-footer {
+    background: #0b0b0b;
+    color: #888;
+    text-align: center;
+    padding: 28px 20px;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.site-footer img {
+    height: 18px;
+    vertical-align: middle;
+    margin: 0 6px;
+}
+
+.site-footer a {
+    color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+
+    .barra-busca {
+        width: 100%;
+        margin: 10px 18px 0;
+    }
+
+    .barra-busca input {
+        width: 100%;
+    }
+
+    .modal-conteudo {
+        padding: 16px;
+    }
+
+    .modal-cabecalho h2 {
+        font-size: 24px;
+    }
+}

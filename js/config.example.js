@@ -1,0 +1,3 @@
+window.CONFIG = {
+    TMDB_API_KEY: 'COLE_SUA_CHAVE_DA_TMDB_AQUI',
+};
